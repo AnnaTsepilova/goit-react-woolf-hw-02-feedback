@@ -1,6 +1,12 @@
 import css from './Statistics.module.css';
 
-export default function Statistics({ good, neutral, bad, total, percentage }) {
+export default function Statistics({
+  good,
+  neutral,
+  bad,
+  total,
+  positivePercentage,
+}) {
   return (
     <ul>
       <li className={css.statisticsItem}>
@@ -21,7 +27,7 @@ export default function Statistics({ good, neutral, bad, total, percentage }) {
       </li>
       <li className={css.statisticsItem}>
         <p className={css.textBold}>Positive feedback:</p>
-        <p className={css.textBold}>{percentage}%</p>
+        <p className={css.textBold}>{positivePercentage}%</p>
       </li>
     </ul>
   );

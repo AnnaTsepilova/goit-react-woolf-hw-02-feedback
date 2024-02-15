@@ -46,7 +46,7 @@ class App extends Component {
             neutral={this.state.neutral}
             bad={this.state.bad}
             total={totalFeedback}
-            percentage={feedbackPercentage}
+            positivePercentage={feedbackPercentage}
           />
         </Section>
       </section>
