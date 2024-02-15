@@ -3,22 +3,26 @@ import css from './FeedbackOptions.module.css';
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
     <div className={css.feedbackOptionsWrapper}>
-      {/* <button className={css.goodButton} type="button">
-        Good
-      </button>
-      <button className={css.neutralButton} type="button">
-        Neutral
-      </button>
-      <button className={css.badButton} type="button">
-        Bad
-      </button> */}
+      {options.map(option => {
+        const chooseButtonColor = () => {
+          switch (option) {
+            case 'good':
+              return css.goodButton;
+            case 'neutral':
+              return css.neutralButton;
+            case 'bad':
+              return css.badButton;
 
-      {options.map((option, key) => {
+            default:
+              return css.neutralButton;
+          }
+        };
+
         return (
           <button
-            className={css.button}
+            className={chooseButtonColor()}
             type="button"
-            key={key}
+            key={option}
             onClick={() => {
               onLeaveFeedback(option);
             }}
