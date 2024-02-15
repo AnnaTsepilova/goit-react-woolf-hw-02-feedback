@@ -1,8 +1,3 @@
-.statisticsList {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
 .statisticsItem {
   display: flex;
 }
@@ -11,4 +6,9 @@
   margin-right: 8px;
   margin-bottom: 16px;
   font-size: 20px;
+}
+
+.textBold {
+  composes: text;
+  font-weight: bold;
 }
